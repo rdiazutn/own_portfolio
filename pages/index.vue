@@ -9,7 +9,7 @@
       sm8
       md6
     >
-      <v-row id="first-section" justify="center" align="top">
+      <v-row id="first-section" justify="center" align="center">
         <v-col cols="6">
           Asd
         </v-col>
