@@ -4,7 +4,6 @@
     <TheAppBar v-model="drawer" :sections="sections" :is-mobile="isMobile" />
     <v-img id="home-section" :aspect-ratio="16/9" src="main-bg.png" :class="isMobile ? 'fullscreen-h.mobile' : 'fullscreen-h'">
       <v-spacer v-if="!isMobile" />
-      <v-spacer v-if="!isMobile" />
       <v-row class="mt-5">
         <v-row justify="center" align="center">
           <v-col :cols="isMobile ? 8 : 5">
