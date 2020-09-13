@@ -18,7 +18,7 @@
           <v-icon>{{ item.icon }}</v-icon>
         </v-list-item-action>
         <v-list-item-content>
-          <v-list-item-title v-text="item.title" class="orange-hover" />
+          <v-list-item-title class="orange-hover" v-text="item.title" />
         </v-list-item-content>
       </v-list-item>
     </v-list>
@@ -41,6 +41,10 @@ export default {
       required: true
     }
   },
+  data: () => {
+    return {
+    }
+  },
   computed: {
     drawer: {
       get () {
@@ -49,10 +53,6 @@ export default {
       set (val) {
         this.$emit('input', val)
       }
-    }
-  },
-  data: () => {
-    return {
     }
   }
 }

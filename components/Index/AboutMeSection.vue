@@ -1,8 +1,8 @@
 <template>
   <TheSection section-id="first-section">
     <v-row justify="start" align="start">
-      <v-col :cols="isMobile ? 12 : 6">
-        <v-row class="my-5" justify="center" align="center">
+      <v-col :cols="isMobile ? 12 : 4">
+        <v-row justify="center" align="center">
           <v-card class="elevation-2 mt-7 w-90">
             <v-card-title class="headline">
               TECNOLOGÍAS
@@ -74,36 +74,39 @@
           </v-card>
         </v-row>
       </v-col>
-      <v-col>
-        <v-card-title class="headline mt-12">
-          EXPERIENCIA
-        </v-card-title>
-        <v-timeline>
-          <v-timeline-item
-            v-for="(experience,index) in experienceArray"
-            :key="index"
-            color="orange lighten-2"
-          >
-            <template v-slot:opposite>
-              <span>{{ experience.date }}</span>
-            </template>
-            <v-card class="elevation-2">
-              <v-card-title class="headline">
-                <div class="word-break">
-                  {{ experience.place }}
-                </div>
-                <div class="subheadline color-primary bold word-break">
-                  {{ experience.position }}
-                </div>
-              </v-card-title>
-              <v-card-text>
-                <div v-for="(description,idx) in experience.descriptions" :key="idx">
-                  {{ description }}
-                </div>
-              </v-card-text>
-            </v-card>
-          </v-timeline-item>
-        </v-timeline>
+      <v-col :cols="isMobile ? 12 : 8">
+        <v-row :class="[{'w-90': isMobile}]" justify="center" align="center">
+          <v-card-title class="headline mt-12">
+            EXPERIENCIA
+          </v-card-title>
+          <v-timeline :dense="isMobile">
+            <v-timeline-item
+              v-for="(experience,index) in experienceArray"
+              :key="index"
+              color="orange lighten-2"
+            >
+              <template v-slot:opposite>
+                <span>{{ experience.date }}</span>
+              </template>
+              <v-card class="elevation-2">
+                <v-card-title class="headline">
+                  <div class="word-break">
+                    {{ experience.place }}
+                  </div>
+                  <div class="subheadline color-primary bold word-break">
+                    {{ experience.position }}
+                  </div>
+                  <span v-if="isMobile" class="normal-text">{{ experience.date }}</span>
+                </v-card-title>
+                <v-card-text>
+                  <div v-for="(description,idx) in experience.descriptions" :key="idx">
+                    {{ description }}
+                  </div>
+                </v-card-text>
+              </v-card>
+            </v-timeline-item>
+          </v-timeline>
+        </v-row>
       </v-col>
     </v-row>
   </TheSection>
@@ -125,10 +128,10 @@ export default {
       experienceArray: [
         {
           date: 'Enero 2020 - Actualidad',
-          place: 'BDEV S.R.L.',
+          place: 'BDEV S.R.L. - Verifarma.',
           position: 'Desarrollador fullstack Ssr.',
           descriptions: ['• Desarrollo de sistema de trazabilidad de medicamentos con Wicket Spring y Hibernate.',
-            '• Desarrollo de sistema de trazabilidad de pedidos y envíos, con Vue.js, Apache cxf y Spring, \n',
+            '• Desarrollo de sistema de trazabilidad de pedidos y envíos, con Vue.js, Apache cxf y Spring,',
             '• Desarrollo de frontend de sistema de trazabilidad de producción con Vue.js.']
         },
         {
