@@ -37,6 +37,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    '~/plugins/smooth.js'
   ],
   /*
   ** Auto import components
@@ -73,7 +74,7 @@ export default {
       dark: true,
       themes: {
         dark: {
-          primary: colors.blue.darken4,
+          primary: colors.blue.darken3,
           secondary: colors.blueGrey.darken3,
           accent: colors.orange.lighten2,
           info: colors.teal.lighten1,
