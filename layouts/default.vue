@@ -59,29 +59,28 @@ export default {
         {
           icon: 'mdi-house',
           title: 'HOME',
-          href: '#home-section'
+          href: '#home-section',
+          tag: 'home-section'
         },
         {
           icon: 'mdi-house',
           title: 'ABOUT ME',
-          href: '#first-section'
+          href: '#first-section',
+          tag: 'first-section'
         },
         {
           icon: 'mdi-house',
           title: 'PROJECTS',
-          href: '#second-section'
+          href: '#second-section',
+          tag: 'second-section'
         },
         {
           icon: 'mdi-house',
           title: 'CONTACT',
-          href: '#third-section'
+          href: '#third-section',
+          tag: 'third-section'
         }
       ]
-    }
-  },
-  methods: {
-    goTo (menu) {
-      console.log(menu)
     }
   }
 }

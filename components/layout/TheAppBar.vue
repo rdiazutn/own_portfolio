@@ -26,7 +26,7 @@
       <v-col v-if="!isMobile">
         <v-row align="center" justify="start">
           <v-col cols="9">
-            <v-tabs color="accent" background-color="transparent" grow :show-arrows="false" v-model="currentTab">
+            <v-tabs v-model="currentTab" color="accent" background-color="transparent" grow :show-arrows="false">
               <v-tab v-for="(item,index) in sections" :key="index" @click.stop="goTo(item)">
                 {{ item.title }}
                 <a :id="'link' +item.href" v-smooth-scroll color="white" :href="item.href" />
@@ -39,7 +39,10 @@
   </v-app-bar>
 </template>
 <script>
+import { debounce } from 'lodash'
+import checkVisible from '~/services/mixins/checkVisible'
 export default {
+  mixins: [checkVisible],
   props: {
     value: {
       type: Boolean,
@@ -54,6 +57,11 @@ export default {
       required: true
     }
   },
+  data: () => {
+    return {
+      currentTab: null
+    }
+  },
   computed: {
     drawer: {
       get () {
@@ -64,14 +72,24 @@ export default {
       }
     }
   },
+  created () {
+    this.handleDebouncedScroll = debounce(this.handleScroll, 100)
+    window.addEventListener('scroll', this.handleDebouncedScroll)
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleDebouncedScroll)
+  },
   methods: {
     goTo (item) {
       document.getElementById('link' + item.href).click()
-    }
-  },
-  data: () => {
-    return {
-      currentTab: null
+    },
+    handleScroll (event) {
+      // Any code to be executed when the window is scrolled
+      this.isUserScrolling = (window.scrollY > 0)
+      const sect = this.sections.find(section => document.getElementById(section.tag) && this.isElementVisible(section.tag))
+      if (sect) {
+        this.currentTab = this.sections.indexOf(sect)
+      }
     }
   }
 }

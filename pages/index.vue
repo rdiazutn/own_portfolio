@@ -45,7 +45,7 @@
           transition="fade-transition"
         />
       </v-carousel>
-      <v-carousel height="1000">
+      <v-carousel height="1000" id="second-section" >
         <v-carousel-item
           v-for="(item,i) in items"
           :key="i"
