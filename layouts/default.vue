@@ -20,8 +20,8 @@
       </v-row>
       <v-spacer v-if="!isMobile" />
       <v-row justify="center" align="center">
-        <v-btn color="transparent" rounded depressed>
-          <a v-smooth-scroll color="white" href="#first-section">
+        <v-btn color="transparent" rounded depressed @click="goToFirstSection">
+          <a id="goToFirst" v-smooth-scroll color="white" href="#first-section">
             <v-icon x-large class="orange-hover">
               mdi-chevron-down
             </v-icon>
@@ -81,6 +81,11 @@ export default {
           tag: 'third-section'
         }
       ]
+    }
+  },
+  methods: {
+    goToFirstSection () {
+      document.getElementById('goToFirst').click()
     }
   }
 }
