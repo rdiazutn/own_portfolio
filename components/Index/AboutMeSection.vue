@@ -3,6 +3,7 @@
     <v-row justify="start" align="start">
       <v-col :cols="isMobile ? 12 : 4">
         <v-row justify="center" align="center">
+          <!-- TODO:  Un poco sobre mi -->
           <v-card class="elevation-2 mt-7 w-90">
             <v-card-title class="headline">
               TECNOLOGÍAS
