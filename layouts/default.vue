@@ -44,9 +44,9 @@
               Fullstack developer
             </div>
             <div class="subheader">
-            Soy estudiante de cuarto año de la carrera de Ingeniería en Sistemas de Información. Me considero alguien proactivo,
-            con ganas de mejorar constantemente y capaz de adaptarme rápidamente.
-            Poseo experiencia en <span class="color-primary">Vue.js</span> y <span class="color-primary">Java</span>.
+              Soy estudiante de cuarto año de la carrera de Ingeniería en Sistemas de Información. Me considero alguien proactivo,
+              con ganas de mejorar constantemente y capaz de adaptarme rápidamente.
+              Poseo experiencia en <span class="color-primary bold">Vue.js</span> y <span class="color-primary bold">Java</span>.
             </div>
           </v-col>
         </v-row>
@@ -62,7 +62,11 @@
         </v-btn>
       </v-row>
     </v-img>
-    <nuxt />
+    <span class="bg-secondary">
+      <v-container>
+        <nuxt />
+      </v-container>
+    </span>
     <v-footer
       absolute
       app
@@ -92,6 +96,9 @@
 .color-primary{
   color: #0277BD;
 }
+.bold{
+  font-weight: bold;
+}
 .header {
   font-weight: bold;
   font-size: 4em;
@@ -102,6 +109,9 @@
 .subheader{
   font-weight: 380;
   font-size: 1.2em;
+}
+.bg-secondary{
+  background: #2b2b2b;
 }
 </style>
 <script>
