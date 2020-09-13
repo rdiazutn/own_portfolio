@@ -26,12 +26,10 @@
       <v-col v-if="!isMobile">
         <v-row align="center" justify="start">
           <v-col cols="9">
-            <v-tabs color="accent" background-color="transparent" grow :show-arrows="false">
-              <v-tab v-for="(item,index) in sections" :key="index" @click="goTo(item)">
-                <v-icon class="menu-icon">
-                  {{ item.icon }}
-                </v-icon>
+            <v-tabs color="accent" background-color="transparent" grow :show-arrows="false" v-model="currentTab">
+              <v-tab v-for="(item,index) in sections" :key="index" @click.stop="goTo(item)">
                 {{ item.title }}
+                <a :id="'link' +item.href" v-smooth-scroll color="white" :href="item.href" />
               </v-tab>
             </v-tabs>
           </v-col>
@@ -64,6 +62,16 @@ export default {
       set (val) {
         this.$emit('input', val)
       }
+    }
+  },
+  methods: {
+    goTo (item) {
+      document.getElementById('link' + item.href).click()
+    }
+  },
+  data: () => {
+    return {
+      currentTab: null
     }
   }
 }

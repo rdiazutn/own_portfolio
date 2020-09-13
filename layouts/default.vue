@@ -2,7 +2,7 @@
   <v-app dark>
     <TheNavigationDrawer v-model="drawer" :sections="sections" :is-mobile="isMobile" />
     <TheAppBar v-model="drawer" :sections="sections" :is-mobile="isMobile" />
-    <v-img :aspect-ratio="16/9" src="main-bg.png" :class="isMobile ? 'fullscreen-h.mobile' : 'fullscreen-h'">
+    <v-img id="home-section" :aspect-ratio="16/9" src="main-bg.png" :class="isMobile ? 'fullscreen-h.mobile' : 'fullscreen-h'">
       <v-spacer v-if="!isMobile" />
       <v-row>
         <v-row justify="center" align="center">
@@ -18,7 +18,7 @@
           </v-col>
         </v-row>
       </v-row>
-      <v-spacer  v-if="!isMobile" />
+      <v-spacer v-if="!isMobile" />
       <v-row justify="center" align="center">
         <v-btn color="transparent" rounded depressed>
           <a v-smooth-scroll color="white" href="#first-section">
@@ -58,19 +58,23 @@ export default {
       sections: [
         {
           icon: 'mdi-house',
-          title: 'HOME'
+          title: 'HOME',
+          href: '#home-section'
         },
         {
           icon: 'mdi-house',
-          title: 'ABOUT ME'
+          title: 'ABOUT ME',
+          href: '#first-section'
         },
         {
           icon: 'mdi-house',
-          title: 'PROJECTS'
+          title: 'PROJECTS',
+          href: '#second-section'
         },
         {
           icon: 'mdi-house',
-          title: 'CONTACT'
+          title: 'CONTACT',
+          href: '#third-section'
         }
       ]
     }
