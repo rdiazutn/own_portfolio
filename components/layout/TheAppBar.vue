@@ -4,10 +4,10 @@
       <v-col>
         <v-row align="center" justify="end">
           <v-col v-if="isMobile" cols="2">
-            <v-app-bar-nav-icon color="accent" class="mr-5" @click.stop="drawer = !drawer" />
+            <v-app-bar-nav-icon color="primary" class="mr-5" @click.stop="drawer = !drawer" />
           </v-col>
           <v-col v-else cols="1">
-            <v-icon color="accent">
+            <v-icon color="primary">
               mdi-laptop
             </v-icon>
           </v-col>
@@ -26,7 +26,7 @@
       <v-col v-if="!isMobile">
         <v-row align="center" justify="start">
           <v-col cols="9">
-            <v-tabs v-model="currentTab" color="accent" background-color="transparent" grow :show-arrows="false">
+            <v-tabs v-model="currentTab" color="primary" background-color="transparent" grow :show-arrows="false">
               <v-tab v-for="(item,index) in sections" :key="index" @click.stop="goTo(item)">
                 {{ item.title }}
                 <a :id="'link' +item.href" v-smooth-scroll color="white" :href="item.href" />

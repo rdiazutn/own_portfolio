@@ -1,5 +1,5 @@
 <template>
-  <TheSection sectionId="first-section">
+  <TheSection section-id="first-section">
     <v-row justify="center" align="center">
       <v-col :cols="isMobile ? 12 : 6">
         <v-row class="my-5" justify="center" align="center">
@@ -75,22 +75,31 @@
         </v-row>
       </v-col>
       <v-col>
+        <v-card-title class="headline">
+          EXPERIENCIA
+        </v-card-title>
         <v-timeline>
           <v-timeline-item
-            v-for="n in 3"
-            :key="n"
+            v-for="(experience,index) in experienceArray"
+            :key="index"
             color="orange lighten-2"
-            large
           >
             <template v-slot:opposite>
-              <span>Tus eu perfecto</span>
+              <span>{{ experience.date }}</span>
             </template>
             <v-card class="elevation-2">
               <v-card-title class="headline">
-                Lorem ipsum
+                <div class="word-break">
+                  {{ experience.place }}
+                </div>
+                <div class="subheadline color-primary bold word-break">
+                  {{ experience.position }}
+                </div>
               </v-card-title>
               <v-card-text>
-                Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.
+                <div v-for="(description,idx) in experience.descriptions" :key="idx">
+                  {{ description }}
+                </div>
               </v-card-text>
             </v-card>
           </v-timeline-item>
@@ -109,6 +118,26 @@ export default {
     isMobile: {
       type: Boolean,
       required: true
+    }
+  },
+  data () {
+    return {
+      experienceArray: [
+        {
+          date: 'Enero 2020 - Actualidad',
+          place: 'BDEV S.R.L.',
+          position: 'Desarrollador fullstack Ssr.',
+          descriptions: ['• Desarrollo de sistema de trazabilidad de medicamentos con Wicket Spring y Hibernate.',
+            '• Desarrollo de sistema de trazabilidad de pedidos y envíos, con Vue.js, Apache cxf y Spring, \n',
+            '• Desarrollo de frontend de sistema de trazabilidad de producción con Vue.js.']
+        },
+        {
+          date: 'Julio 2019 - Actualidad',
+          place: 'Universidad Tecnológica Nacional (UTN)',
+          position: 'Ayudante de Cátedra de Sistemas Operativos.',
+          descriptions: ['• Dictado de clases, colaboración con la corrección de trabajos y exámenes parciales.']
+        }
+      ]
     }
   }
 }
