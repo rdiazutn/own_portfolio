@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar flat :color="isMobile ? 'secondary' :'transparent'" :fixed="!isMobile">
+  <v-app-bar flat :color="isMobile ? 'secondary' :'transparent'" fixed>
     <v-row justify="end" align="center">
       <v-col>
         <v-row align="center" justify="end">
@@ -73,7 +73,7 @@ export default {
     }
   },
   created () {
-    this.handleDebouncedScroll = debounce(this.handleScroll, 100)
+    this.handleDebouncedScroll = debounce(this.handleScroll, 90)
     window.addEventListener('scroll', this.handleDebouncedScroll)
   },
   destroyed () {

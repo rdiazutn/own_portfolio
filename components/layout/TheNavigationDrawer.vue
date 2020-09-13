@@ -2,7 +2,7 @@
   <v-navigation-drawer
     v-if="isMobile"
     v-model="drawer"
-    :clipped="true"
+    clipped
     fixed
     app
   >
@@ -10,7 +10,7 @@
       <v-list-item
         v-for="(item, i) in sections"
         :key="i"
-        :to="item.to"
+        :to="item.href"
         router
         exact
       >
@@ -18,7 +18,7 @@
           <v-icon>{{ item.icon }}</v-icon>
         </v-list-item-action>
         <v-list-item-content>
-          <v-list-item-title v-text="item.title" />
+          <v-list-item-title v-text="item.title" class="orange-hover" />
         </v-list-item-content>
       </v-list-item>
     </v-list>
