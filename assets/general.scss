@@ -1,0 +1,63 @@
+.v-image .v-responsive__content {
+  justify-content: space-between !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.orange-hover:hover{
+color: #FCB74D !important;
+}
+
+.orange-hover{
+color: white !important;
+}
+
+.v-application a{
+color: transparent !important;
+}
+
+.fullscreen-h{
+height: 100vh;
+}
+
+.fullscreen-h\.mobile{
+height: 100vw;
+}
+
+.color-primary{
+color: #0288D1;
+}
+
+.bold{
+font-weight: bold;
+}
+
+.header {
+font-weight: bold;
+font-size: 48px;
+}
+.header\.mobile {
+font-weight: bold;
+font-size: 30px;
+}
+
+.body *{
+font-family: sans-serif;
+}
+.subheader{
+font-weight: 400;
+font-size: 18px;
+}
+
+.subheader\.mobile{
+font-weight: 450;
+font-size: 16px;
+}
+
+.bg-secondary{
+background: #2b2b2b;
+}
+
+.bg-transparent{
+background-color: transparent!important;
+}
