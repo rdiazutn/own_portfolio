@@ -1,6 +1,6 @@
 <template>
   <TheSection section-id="first-section">
-    <v-row justify="center" align="center">
+    <v-row justify="start" align="start">
       <v-col :cols="isMobile ? 12 : 6">
         <v-row class="my-5" justify="center" align="center">
           <v-card class="elevation-2 mt-7 w-90">
@@ -75,7 +75,7 @@
         </v-row>
       </v-col>
       <v-col>
-        <v-card-title class="headline">
+        <v-card-title class="headline mt-12">
           EXPERIENCIA
         </v-card-title>
         <v-timeline>
@@ -133,9 +133,24 @@ export default {
         },
         {
           date: 'Julio 2019 - Actualidad',
-          place: 'Universidad Tecnológica Nacional (UTN)',
+          place: 'Universidad Tecnológica Nacional (UTN).',
           position: 'Ayudante de Cátedra de Sistemas Operativos.',
           descriptions: ['• Dictado de clases, colaboración con la corrección de trabajos y exámenes parciales.']
+        },
+        {
+          date: 'Enero 2019 - Diciembre 2019',
+          place: 'Arquimeda S.R.L.',
+          position: 'Desarrollador fullstack Jr.',
+          descriptions: ['• Análisis de requerimientos, desarrollo, testing, implementación y mantenimiento de sistema ESB.',
+            '• Desarrollo e integración de nuevos canales en sistema de gestión de transacciones electrónicas con Spring.',
+            '• Desarrollo de portal de proveedores para carga de facturas con Vue.js y Nuxt.js.']
+        },
+        {
+          date: 'Abril 2018 - Diciembre 2018',
+          place: 'Gestion IT S.R.L.',
+          position: 'Analista tester.',
+          descriptions: [' • Diseño y ejecución de casos de pruebas.',
+            ' • Automatización de casos de pruebas mediante la herramienta Katalon.']
         }
       ]
     }
