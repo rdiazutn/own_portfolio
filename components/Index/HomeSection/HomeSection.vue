@@ -1,13 +1,13 @@
 <template>
   <v-img id="home-section" :aspect-ratio="16/9" src="main-bg.png" :class="isMobile ? 'fullscreen-h.mobile' : 'fullscreen-h'">
     <v-spacer v-if="!isMobile" />
-    <v-row class="mt-5">
+    <v-row class="mt-10">
       <v-row justify="center" align="center">
         <v-col :cols="isMobile ? 8 : 5">
           <div :class="isMobile ? 'header.mobile' : 'header'">
             Fullstack developer
           </div>
-          <div :class="[isMobile ? 'subheader.mobile' : 'subheader']">
+          <div :class="[isMobile ? 'subheader.mobile' : 'subheader', 'my-5']">
             Soy estudiante de cuarto año de la carrera de Ingeniería en Sistemas de Información. Me considero alguien proactivo,
             con ganas de mejorar constantemente y capaz de adaptarme rápidamente.
             Poseo experiencia en <span class="color-primary bold">Vue.js</span> y <span class="color-primary bold">Java</span>.
