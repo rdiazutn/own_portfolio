@@ -8,26 +8,26 @@
             <v-card-title class="headline">
               TECNOLOGÍAS
             </v-card-title>
-            <v-card-text>
-              <div class="subheader">
+            <v-card-text class="description">
+              <div>
                 Lenguajes
               </div>
               <div class="mt-2 mb-4">
                 Java, JavaScript, SQL, HTML 5,CSS 3, C, Haskell, Prolog y Groovy.
               </div>
-              <div class="subheader">
+              <div>
                 Frameworks
               </div>
               <div class="mt-2 mb-4">
                 Vue.js, Nuxt.js, Hibernate y Spring.
               </div>
-              <div class="subheader">
+              <div>
                 Manejo de bases de datos
               </div>
               <div class="mt-2 mb-4">
                 PL/SQL, Transact-SQL y MySql.
               </div>
-              <div class="subheader">
+              <div>
                 Herramientas
               </div>
               <div class="mt-2 mb-4">
@@ -43,8 +43,8 @@
             <v-card-title class="headline">
               ESTUDIOS
             </v-card-title>
-            <v-card-text>
-              <div class="subheader">
+            <v-card-text class="description">
+              <div>
                 Universidad Tecnológica Nacional (UTN-FRBA)
                 2017 – Actualidad.
               </div>
@@ -52,7 +52,7 @@
                 Carrera: Ingeniería en Sistemas de Información. Actualmente cursando
                 4to año.
               </div>
-              <div class="subheader">
+              <div>
                 Instituto Casa De Jesús 2012 - 2016
               </div>
               <div class="mt-2 mb-4">
@@ -66,8 +66,8 @@
             <v-card-title class="headline">
               IDIOMAS
             </v-card-title>
-            <v-card-text>
-              <div class="subheader">
+            <v-card-text class="description">
+              <div>
                 Inglés
               </div>
               <div class="subheader mt-2">

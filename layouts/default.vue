@@ -3,9 +3,7 @@
     <TheNavigationDrawer v-model="drawer" :sections="sections" :is-mobile="isMobile" />
     <TheAppBar v-model="drawer" :sections="sections" :is-mobile="isMobile" />
     <HomeSection :is-mobile="isMobile" />
-    <span class="bg-secondary">
-      <nuxt />
-    </span>
+    <nuxt />
     <v-footer
       absolute
       app
@@ -44,15 +42,21 @@ export default {
         },
         {
           icon: 'mdi-house',
-          title: 'PROJECTS',
+          title: 'EXPERIENCE',
           href: '#second-section',
           tag: 'second-section'
         },
         {
           icon: 'mdi-house',
-          title: 'CONTACT',
+          title: 'EXPERIENCE',
           href: '#third-section',
           tag: 'third-section'
+        },
+        {
+          icon: 'mdi-house',
+          title: 'CONTACT',
+          href: '#fourth-section',
+          tag: 'fourth-section'
         }
       ]
     }
