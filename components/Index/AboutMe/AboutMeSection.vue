@@ -1,5 +1,5 @@
 <template>
-  <TheSection section-id="first-section">
+  <TheSection section-id="first-section" title="ABOUT ME">
     <v-row justify="start" align="start">
       <v-col :cols="isMobile ? 12 : 3" class="mr-10">
         <AboutMeDescription />

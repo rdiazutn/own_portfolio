@@ -1,6 +1,8 @@
 <template>
   <v-row :id="sectionId">
-    <v-row :class="[{'my-6': !isMobile}, {'custom-spacer': !isMobile}]" />
+    <v-row justify="center" :class="[{'my-6': !isMobile}, {'custom-spacer': !isMobile}, 'section-title']">
+      {{ title }}
+    </v-row>
     <slot />
   </v-row>
 </template>
@@ -10,6 +12,10 @@ export default {
   mixins: [mobileMixin],
   props: {
     sectionId: {
+      type: String,
+      required: true
+    },
+    title: {
       type: String,
       required: true
     }
