@@ -4,9 +4,7 @@
     <TheAppBar v-model="drawer" :sections="sections" :is-mobile="isMobile" />
     <HomeSection :is-mobile="isMobile" />
     <span class="bg-secondary">
-      <v-container>
-        <nuxt />
-      </v-container>
+      <nuxt />
     </span>
     <v-footer
       absolute

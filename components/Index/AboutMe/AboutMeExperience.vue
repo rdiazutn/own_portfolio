@@ -1,5 +1,5 @@
 <template>
-  <span>
+  <span class="mx-5">
     <v-row justify="center" align="center">
       <v-card-title class="headline mt-4">
         EXPERIENCIA

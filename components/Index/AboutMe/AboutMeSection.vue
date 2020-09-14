@@ -1,12 +1,10 @@
 <template>
-  <TheSection section-id="first-section">
-    <v-row justify="start" align="start">
-      <v-col :cols="isMobile ? 12 : 3">
-        <AboutMeDescription />
-      </v-col>
-      <v-col :cols="isMobile ? 12 : 9">
-        <AboutMeExperience :is-mobile="isMobile" />
-      </v-col>
+  <TheSection section-id="first-section" title="ABOUT ME">
+    <v-row justify="center">
+      <AboutMeDescription :is-mobile="isMobile" />
+    </v-row>
+    <v-row justify="center">
+      <AboutMeExperience :is-mobile="isMobile" />
     </v-row>
   </TheSection>
 </template>
