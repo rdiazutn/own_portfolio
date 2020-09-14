@@ -9,7 +9,7 @@
       sm8
       md6
     >
-      <AboutMeSection :is-mobile="isMobile" class="mx-5"/>
+      <AboutMeSection :is-mobile="isMobile" class="mx-5" />
       <ProjectsSection />
     </v-flex>
   </v-layout>
