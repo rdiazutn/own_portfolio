@@ -71,8 +71,16 @@ font-size: 18px;
 }
 
 .custom-spacer{
-  height: 12px;
+  height: 10px!important;
+  margin-top: 100px !important;
   width: 100%;
+}
+
+.row{
+  margin-right: 0px!important;
+  margin-left: 0px!important;
+  padding-right: 0px!important;
+  padding-left: 0px!important;
 }
 
 .underline-white{
@@ -98,6 +106,10 @@ font-size: 18px;
 
 .w-90{
   width: 90%;
+}
+
+.w-100{
+  width:100%;
 }
 
 .w-90\.mobile{

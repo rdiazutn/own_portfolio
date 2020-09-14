@@ -1,10 +1,19 @@
 <template>
-  <v-row :id="sectionId">
-    <v-row justify="center" :class="[{'my-6': !isMobile}, {'custom-spacer': !isMobile}, 'section-title']">
-      {{ title }}
+  <span>
+    <v-row :id="sectionId">
+      <v-row :class="[{'custom-spacer': !isMobile}]">
+        <v-spacer />
+      </v-row>
+      <v-row>
+        <v-row justify="center" class="section-title">
+          {{ title }}
+        </v-row>
+        <v-row>
+          <slot />
+        </v-row>
+      </v-row>
     </v-row>
-    <slot />
-  </v-row>
+  </span>
 </template>
 <script>
 import mobileMixin from '~/services/mixins/reactiveMixin'
