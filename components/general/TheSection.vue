@@ -18,9 +18,9 @@
         <v-row justify="center" class="section-title">
           {{ title }}
         </v-row>
-        <v-row justify="center" >
+        <v-row justify="center">
           <span class="invisible-title">
-          {{ title }}
+            {{ title }}
           </span>
         </v-row>
         <v-row justify="center">
