@@ -1,6 +1,6 @@
 <template>
   <v-row :id="sectionId">
-    <div :class="[{'my-10': !isMobile}, {'h-18': !isMobile}]" />
+    <v-row :class="[{'my-6': !isMobile}, {'custom-spacer': !isMobile}]" />
     <slot />
   </v-row>
 </template>

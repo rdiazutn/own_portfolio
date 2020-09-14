@@ -17,9 +17,8 @@
 
 <script>
 import mobileMixin from '~/services/mixins/reactiveMixin'
-import AboutMeSection from '~/components/Index/AboutMeSection'
+import AboutMeSection from '~/components/Index/AboutMe/AboutMeSection'
 import ProjectsSection from '~/components/Index/ProjectsSection'
-
 export default {
   components: {
     AboutMeSection,

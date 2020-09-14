@@ -2,33 +2,7 @@
   <v-app dark>
     <TheNavigationDrawer v-model="drawer" :sections="sections" :is-mobile="isMobile" />
     <TheAppBar v-model="drawer" :sections="sections" :is-mobile="isMobile" />
-    <v-img id="home-section" :aspect-ratio="16/9" src="main-bg.png" :class="isMobile ? 'fullscreen-h.mobile' : 'fullscreen-h'">
-      <v-spacer v-if="!isMobile" />
-      <v-row class="mt-5">
-        <v-row justify="center" align="center">
-          <v-col :cols="isMobile ? 8 : 5">
-            <div :class="isMobile ? 'header.mobile' : 'header'">
-              Fullstack developer
-            </div>
-            <div :class="isMobile ? 'subheader.mobile' : 'subheader'">
-              Soy estudiante de cuarto año de la carrera de Ingeniería en Sistemas de Información. Me considero alguien proactivo,
-              con ganas de mejorar constantemente y capaz de adaptarme rápidamente.
-              Poseo experiencia en <span class="color-primary bold">Vue.js</span> y <span class="color-primary bold">Java</span>.
-            </div>
-          </v-col>
-        </v-row>
-      </v-row>
-      <v-spacer v-if="!isMobile" />
-      <v-row justify="center" align="center">
-        <v-btn color="transparent" rounded depressed @click="goToFirstSection">
-          <a id="goToFirst" v-smooth-scroll color="white" href="#first-section">
-            <v-icon x-large class="orange-hover">
-              mdi-chevron-down
-            </v-icon>
-          </a>
-        </v-btn>
-      </v-row>
-    </v-img>
+    <HomeSection :is-mobile="isMobile" />
     <span class="bg-secondary">
       <v-container>
         <nuxt />
@@ -46,10 +20,12 @@
 import mobileMixin from '~/services/mixins/reactiveMixin'
 import TheNavigationDrawer from '~/components/layout/TheNavigationDrawer'
 import TheAppBar from '~/components/layout/TheAppBar'
+import HomeSection from '~/components/Index/HomeSection/HomeSection'
 export default {
   components: {
     TheNavigationDrawer,
-    TheAppBar
+    TheAppBar,
+    HomeSection
   },
   mixins: [mobileMixin],
   data () {
@@ -81,11 +57,6 @@ export default {
           tag: 'third-section'
         }
       ]
-    }
-  },
-  methods: {
-    goToFirstSection () {
-      document.getElementById('goToFirst').click()
     }
   }
 }
