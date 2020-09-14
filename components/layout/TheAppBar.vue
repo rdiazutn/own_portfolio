@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar flat :color="isMobile ? 'secondary' :'transparent'" fixed>
+  <v-app-bar flat fixed :class="[isMobile ? 'grey-bg' : 'grey-shadow']" :hide-on-scroll="!isMobile">
     <v-row justify="end" align="center">
       <v-col>
         <v-row align="center" justify="end">
