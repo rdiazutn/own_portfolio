@@ -7,7 +7,7 @@
         :class="btnClass"
         rounded
         depressed
-        v-on="on"
+        v-on="getListeners(on)"
       >
         {{ buttonText }}
         <slot />
@@ -37,6 +37,12 @@ export default {
       return {
         ...attrs,
         ...this.$attrs
+      }
+    },
+    getListeners (on) {
+      return {
+        ...on,
+        ...this.$listeners
       }
     }
   }

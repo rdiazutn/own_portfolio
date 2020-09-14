@@ -21,6 +21,7 @@
               class="mx-4"
               :icon-name="link.icon"
               :button-tooltip="link.description"
+              @click="goTo(link)"
             />
           </v-row>
         </v-col>
@@ -55,15 +56,18 @@ export default {
       links: [
         {
           icon: 'mdi-linkedin',
-          description: 'Visit my linkedin!'
+          description: 'Visit my linkedin!',
+          url: 'https://www.linkedin.com/in/rodrigo-diaz-6a74a9153/'
         },
         {
           icon: 'mdi-github',
-          description: 'See my code!'
+          description: 'See my code!',
+          url: 'https://github.com/rdiazutn'
         },
         {
           icon: 'mdi-file-account',
-          description: 'Get my resume!'
+          description: 'Get my resume!',
+          url: 'https://drive.google.com/uc?export=download&id=1qMTpPnInmhl4yTis1HZJtN_FcZ0BgDLQ'
         }
       ]
     }
@@ -71,6 +75,9 @@ export default {
   methods: {
     goToFirstSection () {
       document.getElementById('goToFirst').click()
+    },
+    goTo (link) {
+      window.location.href = link.url
     }
   }
 }

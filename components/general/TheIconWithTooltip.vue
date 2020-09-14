@@ -1,5 +1,5 @@
 <template>
-  <TheButtonWithTooltip v-bind="$attrs" btn-class="grey-shadow">
+  <TheButtonWithTooltip v-bind="$attrs" btn-class="grey-shadow" v-on="$listeners">
     <v-icon large>
       {{ iconName }}
     </v-icon>
