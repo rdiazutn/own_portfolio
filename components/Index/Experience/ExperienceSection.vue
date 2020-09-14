@@ -1,15 +1,15 @@
 <template>
-  <TheSection section-id="first-section" title="ABOUT ME">
-    <AboutMeDescription :is-mobile="isMobile" />
+  <TheSection section-id="second-section" title="EXPERIENCE">
+    <ExperienceDescription :is-mobile="isMobile" />
   </TheSection>
 </template>
 <script>
 import TheSection from '~/components/general/TheSection'
-import AboutMeDescription from '~/components/Index/AboutMe/AboutMeDescription'
+import ExperienceDescription from '~/components/Index/Experience/ExperienceDescription'
 export default {
   components: {
     TheSection,
-    AboutMeDescription
+    ExperienceDescription
   },
   props: {
     isMobile: {
