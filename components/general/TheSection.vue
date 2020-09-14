@@ -5,10 +5,10 @@
     align-center
   >
     <v-flex
+      :id="sectionId"
       xs12
       sm8
       md6
-      :id="sectionId"
       class="mt-4"
     >
       <div :id="sectionId">
@@ -17,6 +17,11 @@
         </v-row>
         <v-row justify="center" class="section-title">
           {{ title }}
+        </v-row>
+        <v-row justify="center" >
+          <span class="invisible-title">
+          {{ title }}
+          </span>
         </v-row>
         <v-row justify="center">
           <v-col>

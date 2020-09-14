@@ -48,7 +48,7 @@ export default {
         },
         {
           icon: 'mdi-house',
-          title: 'EXPERIENCE',
+          title: 'PROJECTS',
           href: '#third-section',
           tag: 'third-section'
         },

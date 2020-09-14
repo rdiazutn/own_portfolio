@@ -1,7 +1,7 @@
 <template>
   <span>
-    <AboutMeSection :is-mobile="isMobile" class="mx-5 bg-secondary" />
-    <ExperienceSection :is-mobile="isMobile" class="mx-5 bg-third"/>
+    <AboutMeSection :is-mobile="isMobile" class="bg-secondary" />
+    <ExperienceSection :is-mobile="isMobile" class="bg-third"/>
     <ProjectsSection />
   </span>
 </template>

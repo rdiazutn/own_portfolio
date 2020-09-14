@@ -1,10 +1,5 @@
 <template>
   <span class="mx-5">
-    <v-row justify="center" align="center">
-      <v-card-title class="headline mt-4">
-        EXPERIENCIA
-      </v-card-title>
-    </v-row>
     <v-row :class="[{'w-90': isMobile}]" justify="center" align="center">
       <v-timeline :dense="isMobile">
         <v-timeline-item

@@ -114,12 +114,17 @@ font-size: 18px;
   width: 90%;
 }
 
+.w-90\.mobile{
+  width: 90%;
+}
+
 .w-100{
   width:100%;
 }
 
-.w-90\.mobile{
-  width: 90%;
+.invisible-title{
+  color: transparent;
+  border-top: 5px solid #FCB74D;
 }
   
   .bg-secondary{
