@@ -1,10 +1,20 @@
 <template>
   <span class="px-5">
+    <v-row justify="center">
+      <v-col v-for="(feature,index) in features" :key="index">
+        <v-row justify="center">
+          <TheHexagonIcon x-large :icon-name="feature.icon" />
+        </v-row>
+        <v-row justify="center" class="pt-4 subheader-strong">
+          {{ feature.description }}
+        </v-row>
+      </v-col>
+    </v-row>
     <v-row justify="center" align="center" class="mx-5">
       <!-- TODO:  Un poco sobre mi -->
       <v-col :class="[{'mr-5': !isMobile}]" :cols="isMobile ? 12 : 6">
         <v-row>
-          <v-card class="elevation-2 mt-7 w-100">
+          <v-card dark class="elevation-2 mt-7 w-100">
             <v-card-title class="headline">
               TECNOLOGÍAS
             </v-card-title>
@@ -39,7 +49,7 @@
       </v-col>
       <v-col :class="[{'ml-5': !isMobile}]">
         <v-row>
-          <v-card class="elevation-2 mt-7 w-100">
+          <v-card dark class="elevation-2 mt-7 w-100">
             <v-card-title class="headline">
               ESTUDIOS
             </v-card-title>
@@ -62,7 +72,7 @@
           </v-card>
         </v-row>
         <v-row>
-          <v-card class="elevation-2 mt-7 w-100">
+          <v-card dark class="elevation-2 mt-7 w-100">
             <v-card-title class="headline">
               IDIOMAS
             </v-card-title>
@@ -70,7 +80,7 @@
               <div>
                 Inglés
               </div>
-              <div class="subheader mt-2">
+              <div class="mt-2">
                 Portugués
               </div>
             </v-card-text>
@@ -81,11 +91,37 @@
   </span>
 </template>
 <script>
+import TheHexagonIcon from '~/components/general/TheHexagonIcon'
 export default {
+  components: {
+    TheHexagonIcon
+  },
   props: {
     isMobile: {
       type: Boolean,
       required: true
+    }
+  },
+  data () {
+    return {
+      features: [
+        {
+          icon: 'mdi-format-list-checks',
+          description: 'MULTITASKING'
+        },
+        {
+          icon: 'mdi-cog-outline',
+          description: 'ORIENTADO AL PERFORMANCE'
+        },
+        {
+          icon: 'mdi-code-tags-check',
+          description: 'GOOD PRACTICES'
+        },
+        {
+          icon: 'mdi-cellphone-link',
+          description: 'RESPONSIVE'
+        }
+      ]
     }
   }
 }

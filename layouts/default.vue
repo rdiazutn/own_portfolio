@@ -36,7 +36,7 @@ export default {
         },
         {
           icon: 'mdi-house',
-          title: 'ABOUT ME',
+          title: 'ABOUT',
           href: '#first-section',
           tag: 'first-section'
         },
@@ -46,12 +46,12 @@ export default {
           href: '#second-section',
           tag: 'second-section'
         },
-        {
-          icon: 'mdi-house',
-          title: 'PROJECTS',
-          href: '#third-section',
-          tag: 'third-section'
-        },
+        // {
+        //   icon: 'mdi-house',
+        //   title: 'PROJECTS',
+        //   href: '#third-section',
+        //   tag: 'third-section'
+        // },
         {
           icon: 'mdi-house',
           title: 'CONTACT',

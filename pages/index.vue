@@ -2,7 +2,7 @@
   <span>
     <AboutMeSection :is-mobile="isMobile" class="bg-secondary" />
     <ExperienceSection :is-mobile="isMobile" class="bg-third" />
-    <ProjectsSection />
+    <ContactMeSection :is-mobile="isMobile" class="bg-third" />
   </span>
 </template>
 
@@ -10,12 +10,12 @@
 import mobileMixin from '~/services/mixins/reactiveMixin'
 import AboutMeSection from '~/components/Index/AboutMe/AboutMeSection'
 import ExperienceSection from '~/components/Index/Experience/ExperienceSection'
-import ProjectsSection from '~/components/Index/ProjectsSection'
+import ContactMeSection from '~/components/Index/ContactMe/ContactMeSection'
 export default {
   components: {
     AboutMeSection,
-    ProjectsSection,
-    ExperienceSection
+    ExperienceSection,
+    ContactMeSection
   },
   mixins: [mobileMixin],
   data: () => {
