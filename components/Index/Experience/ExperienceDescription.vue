@@ -5,12 +5,12 @@
         <v-timeline-item
           v-for="(experience,index) in experienceArray"
           :key="index"
-          color="orange lighten-2"
+          color="blue darken-4"
         >
           <template v-slot:opposite>
-            <span>{{ experience.date }}</span>
+            <span class="subheader-strong">{{ experience.date }}</span>
           </template>
-          <v-card class="elevation-2">
+          <v-card dark class="elevation-2">
             <v-card-title class="headline no-flex">
               <div class="word-break">
                 {{ experience.place }}
@@ -44,7 +44,7 @@ export default {
     return {
       experienceArray: [
         {
-          date: 'Enero 2020 - Actualidad',
+          date: 'ENERO 2020 - ACTUALIDAD',
           place: 'BDEV S.R.L. - Verifarma.',
           position: 'Desarrollador fullstack Ssr.',
           descriptions: ['• Desarrollo de sistema de trazabilidad de medicamentos con Wicket Spring y Hibernate.',
@@ -52,13 +52,13 @@ export default {
             '• Desarrollo de frontend de sistema de trazabilidad de producción con Vue.js.']
         },
         {
-          date: 'Julio 2019 - Actualidad',
+          date: 'JULIO 2019 - ACTUALIDAD',
           place: 'Universidad Tecnológica Nacional (UTN).',
           position: 'Ayudante de Cátedra de Sistemas Operativos.',
           descriptions: ['• Dictado de clases, colaboración con la corrección de trabajos y exámenes parciales.']
         },
         {
-          date: 'Enero 2019 - Diciembre 2019',
+          date: 'ENERO 2019 - DICIEMBRE 2019',
           place: 'Arquimeda S.R.L.',
           position: 'Desarrollador fullstack Jr.',
           descriptions: ['• Análisis de requerimientos, desarrollo, testing, implementación y mantenimiento de sistema ESB.',
@@ -66,7 +66,7 @@ export default {
             '• Desarrollo de portal de proveedores para carga de facturas con Vue.js y Nuxt.js.']
         },
         {
-          date: 'Abril 2018 - Diciembre 2018',
+          date: 'ABRIL 2018 - DICIEMBRE 2018',
           place: 'Gestion IT S.R.L.',
           position: 'Analista tester.',
           descriptions: [' • Diseño y ejecución de casos de pruebas.',

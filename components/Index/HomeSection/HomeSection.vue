@@ -7,7 +7,7 @@
           <div :class="isMobile ? 'header.mobile' : 'header'">
             Fullstack developer
           </div>
-          <div :class="[isMobile ? 'subheader.mobile' : 'subheader', 'my-5']">
+          <div :class="[isMobile ? 'subheader-strong' : 'subheader', 'my-5']">
             Soy estudiante de cuarto año de la carrera de Ingeniería en Sistemas de Información. Me considero alguien proactivo,
             con ganas de mejorar constantemente y capaz de adaptarme rápidamente.
             Poseo experiencia en <span class="color-primary bold">Vue.js</span> y <span class="color-primary bold">Java</span>.
