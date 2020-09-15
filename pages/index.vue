@@ -2,7 +2,7 @@
   <span>
     <AboutMeSection :is-mobile="isMobile" class="bg-secondary" />
     <ExperienceSection :is-mobile="isMobile" class="bg-third" />
-    <ContactMeSection :is-mobile="isMobile" class="bg-third" />
+    <ContactMeSection :is-mobile="isMobile" class="bg-fourth" />
   </span>
 </template>
 
