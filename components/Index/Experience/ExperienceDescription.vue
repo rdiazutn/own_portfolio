@@ -1,6 +1,6 @@
 <template>
   <span class="mx-5">
-    <v-row class="w-90" justify="center" align="center">
+    <v-row justify="center" align="center">
       <v-timeline :dense="isMobile">
         <v-timeline-item
           v-for="(experience,index) in experienceArray"
