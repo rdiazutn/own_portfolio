@@ -1,6 +1,6 @@
 <template>
   <span class="mx-5">
-    <v-row :class="[{'w-90': isMobile}]" justify="center" align="center">
+    <v-row class="w-90" justify="center" align="center">
       <v-timeline :dense="isMobile">
         <v-timeline-item
           v-for="(experience,index) in experienceArray"
@@ -13,10 +13,10 @@
           <v-card dark class="elevation-2">
             <v-card-title class="headline no-flex">
               <div class="word-break">
-                {{ experience.place }}
+                {{ experience.position }}
               </div>
               <div class="subheadline color-primary bold word-break">
-                {{ experience.position }}
+                {{ experience.place }}
               </div>
               <span v-if="isMobile" class="normal-text">{{ experience.date }}</span>
             </v-card-title>

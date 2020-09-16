@@ -1,17 +1,19 @@
 <template>
-  <v-img id="home-section" :aspect-ratio="16/9" src="main-bg.png" :class="isMobile ? 'fullscreen-h.mobile' : 'fullscreen-h'">
+  <v-img id="home-section" :aspect-ratio="16/9" src="main-bg-darker.png" class="fullscreen-h">
     <v-spacer v-if="!isMobile" />
     <v-row class="mt-10">
       <v-row justify="center" align="center">
         <v-col :cols="isMobile ? 8 : 5">
-          <div :class="isMobile ? 'header.mobile' : 'header'">
+          <div class="header">
+            Rodrigo Diaz
+          </div>
+          <div class="subheader">
             Fullstack developer
           </div>
-          <div :class="[isMobile ? 'subheader-strong text-white' : 'subheader', 'my-5']">
+          <div :class="[isMobile ? 'text-body-strong text-white' : 'text-body', 'my-1']">
             Soy estudiante de cuarto año de la carrera de Ingeniería en Sistemas de Información. Me considero alguien proactivo,
             con ganas de mejorar constantemente y capaz de adaptarme rápidamente.
-            Poseo experiencia en <span class="color-primary bold">Vue.js</span> y <span class="color-primary bold">Java</span>.
-            <!-- TODO: LINEA HORIZONTAL Y REDES + CV -->
+            Poseo experiencia en <span class="color-secondary bold">Vue.js</span> y <span class="color-secondary bold">Java</span>.
           </div>
           <hr class="underline-white my-4">
           <v-row justify="center">
@@ -77,7 +79,7 @@ export default {
       document.getElementById('goToFirst').click()
     },
     goTo (link) {
-      window.location.href = link.url
+      window.open(link.url, '_blank')
     }
   }
 }

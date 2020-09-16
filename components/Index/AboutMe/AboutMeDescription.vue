@@ -1,11 +1,11 @@
 <template>
   <span class="px-5">
     <v-row justify="center">
-      <v-col v-for="(feature,index) in features" :key="index">
+      <v-col v-for="(feature,index) in features" :key="index" :cols="isMobile ? 24/features.length : 12/features.length">
         <v-row justify="center">
           <TheHexagonIcon x-large :icon-name="feature.icon" />
         </v-row>
-        <v-row justify="center" class="pt-4 subheader-strong">
+        <v-row justify="center" class="pt-4 text-body-strong">
           {{ feature.description }}
         </v-row>
       </v-col>
@@ -23,25 +23,25 @@
                 Lenguajes
               </div>
               <div class="mt-2 mb-4">
-                Java, JavaScript, SQL, HTML 5,CSS 3, C, Haskell, Prolog y Groovy.
+                Java — JavaScript — SQL — HTML 5 — CSS 3 — C — Haskell — Prolog — Groovy
               </div>
               <div>
                 Frameworks
               </div>
               <div class="mt-2 mb-4">
-                Vue.js, Nuxt.js, Hibernate y Spring.
+                Vue.js — Nuxt.js — Hibernate — Spring
               </div>
               <div>
                 Manejo de bases de datos
               </div>
               <div class="mt-2 mb-4">
-                PL/SQL, Transact-SQL y MySql.
+                PL/SQL — Transact-SQL — MySql
               </div>
               <div>
                 Herramientas
               </div>
               <div class="mt-2 mb-4">
-                Swagger, Jest, i18n, JAX-WS, JAXB, JUnit, Maven, SVN, Github y Jira.
+                Swagger — Jest — i18n — JAX-WS — JAXB — JUnit — Maven — SVN — GIT — Jira
               </div>
             </v-card-text>
           </v-card>
@@ -56,17 +56,17 @@
             <v-card-text class="description">
               <div>
                 Universidad Tecnológica Nacional (UTN-FRBA)
-                2017 – Actualidad.
+                2017 – Actualidad
               </div>
               <div class="mt-2 mb-4">
                 Carrera: Ingeniería en Sistemas de Información. Actualmente cursando
-                4to año.
+                4to año
               </div>
               <div>
-                Instituto Casa De Jesús 2012 - 2016
+                Instituto Casa De Jesús 2012 — 2016
               </div>
               <div class="mt-2 mb-4">
-                Título obtenido: Perito Mercantil con orientación informática. Recibido.
+                Título obtenido: Perito Mercantil con orientación informática. Recibido
               </div>
             </v-card-text>
           </v-card>
@@ -80,8 +80,14 @@
               <div>
                 Inglés
               </div>
+              <div>
+                Hablado y escrito avanzado
+              </div>
               <div class="mt-2">
                 Portugués
+              </div>
+              <div>
+                Hablado inicial y escrito intermedio
               </div>
             </v-card-text>
           </v-card>

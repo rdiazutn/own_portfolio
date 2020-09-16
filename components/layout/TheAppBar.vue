@@ -1,7 +1,7 @@
 <template>
-  <v-app-bar flat fixed class="bar-bg" dark>
+  <v-app-bar flat fixed class="bar-bg z-10" dark>
     <v-row justify="end" align="center">
-      <v-col>
+      <v-col :cols="isMobile ? 12 : 3">
         <v-row align="center" justify="end">
           <v-col v-if="isMobile" cols="2">
             <v-app-bar-nav-icon color="primary" class="mr-5" @click.stop="drawer = !drawer" />
@@ -18,7 +18,7 @@
               </strong>
             </div>
             <div>
-              Web developer
+              Fullstack developer
             </div>
           </v-col>
         </v-row>

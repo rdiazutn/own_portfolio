@@ -9,7 +9,7 @@
 </template>
 <style scoped>
 .main-icon{
-  z-index: 10;
+  z-index: 2;
 }
 .hexagon {
   position: relative;

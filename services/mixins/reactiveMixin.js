@@ -16,7 +16,7 @@ export default {
   },
   computed: {
     isMobile () {
-      return this.windowSize <= 800 
+      return this.windowSize <= 900 
     }
   },
   methods: {
