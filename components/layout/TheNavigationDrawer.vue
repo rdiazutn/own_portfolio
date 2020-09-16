@@ -5,6 +5,7 @@
     clipped
     fixed
     app
+    dark
   >
     <v-list>
       <v-list-item

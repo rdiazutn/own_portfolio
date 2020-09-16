@@ -12,18 +12,13 @@
       class="mt-4"
     >
       <div :id="sectionId">
-        <v-row :class="[{'custom-spacer': !isMobile}]">
+        <v-row class="custom-spacer">
           <v-spacer />
         </v-row>
         <v-row justify="center" class="section-title">
           {{ title }}
         </v-row>
-        <v-row justify="center">
-          <span class="invisible-title">
-            {{ title }}
-          </span>
-        </v-row>
-        <v-row justify="center">
+        <v-row>
           <v-col>
             <slot />
           </v-col>

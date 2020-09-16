@@ -1,5 +1,5 @@
 <template>
-  <TheSection section-id="fourth-section" title="CONTACT ME" :class="isMobile ? 'fullscreen-h.mobile' : 'fullscreen-h'">
+  <TheSection section-id="fourth-section" title="CONTACT ME" class="fullscreen-h bg-fourth">
     <ContactMeDescription :is-mobile="isMobile" />
   </TheSection>
 </template>
