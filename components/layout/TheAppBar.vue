@@ -106,8 +106,7 @@ export default {
       if (mostVisible) {
         this.currentTab = this.sections.indexOf(mostVisible)
       }
-
-      this.showBar = !this.isElementVisible('home-section')
+      this.showBar = this.percentageVisible('first-section') > 30
     },
     getMostVisibleSection () {
       let maxPercentage = -1
@@ -116,13 +115,11 @@ export default {
       for (index in this.sections) {
         const section = this.sections[index]
         const percentageVisible = this.percentageVisible(section.tag)
-        console.log(section.title, percentageVisible)
         if (percentageVisible > maxPercentage && percentageVisible > 20 && percentageVisible < 70) {
           maxPercentage = percentageVisible
           maxSection = section
         }
       }
-      console.log(maxSection)
       return maxSection
     }
   }

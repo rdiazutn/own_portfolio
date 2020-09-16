@@ -31,9 +31,9 @@
     </v-row>
     <v-spacer v-if="!isMobile" />
     <v-row justify="center" align="center">
-      <v-btn color="transparent" rounded depressed @click="goToFirstSection">
-        <a id="goToFirst" v-smooth-scroll color="white" href="#first-section">
-          <v-icon x-large class="orange-hover">
+      <v-btn color="transparent" x-large rounded depressed @click="goToFirstSection">
+        <a id="goToFirst" v-smooth-scroll href="#first-section">
+          <v-icon size="80" class="orange-hover">
             mdi-chevron-down
           </v-icon>
         </a>
