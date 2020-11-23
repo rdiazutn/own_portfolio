@@ -6,6 +6,9 @@ export default {
   ** See https://nuxtjs.org/api/configuration-mode
   */
   ssr: false,
+  router: {
+    base: '/own_portfolio/'
+  },
   /*
   ** Nuxt target
   ** See https://nuxtjs.org/api/configuration-target
